@@ -1,0 +1,5 @@
+pedido,destino,unidades,ventana_inicio,ventana_fin,prioridad
+D-101,San Lorenzo,6,09:00,11:00,Alta
+D-102,Asuncion,4,10:00,13:00,Media
+D-103,Luque,3,09:00,12:00,Media
+D-104,Mariano Roque Alonso,2,13:00,16:00,Baja

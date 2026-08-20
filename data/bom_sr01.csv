@@ -1,0 +1,8 @@
+producto,componente,cantidad_por_unidad,stock_inicial,lead_time_dias
+SR-01,Motor electrico 2 HP,1,12,3
+SR-01,Resistencia,2,20,5
+SR-01,Carcasa,1,25,4
+SR-01,Ventilador,1,18,3
+SR-01,Bandejas,1,20,2
+SR-01,Panel de control,1,16,4
+SR-01,Tornilleria,1,50,1

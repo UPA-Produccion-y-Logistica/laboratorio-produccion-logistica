@@ -1,0 +1,5 @@
+recurso,capacidad_diaria_min,tiempo_por_unidad_min,capacidad_base,capacidad_mejora
+Corte y preparacion,480,20,1,1
+Ensamblaje,480,30,1,1
+Prueba termica,480,40,1,2
+Embalaje,480,15,1,1
