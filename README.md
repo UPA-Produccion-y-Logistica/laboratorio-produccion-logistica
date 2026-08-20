@@ -47,3 +47,10 @@ La conclusión didáctica es que el segundo puesto de prueba no solo aumenta la 
 En la primera corrida no se cambian los datos de entrada. Cada equipo registra el escenario, parámetros modificados, KPI, decisión recomendada y limitaciones del modelo. Luego puede proponer una mejora y justificarla con evidencia.
 
 Todos los datos son sintéticos y exclusivamente didácticos; no representan una empresa real.
+
+## Navegación pública
+
+- [Propuesta pedagógica aplicada con IA](propuesta.html)
+- [Dashboard IoT didáctico](dashboard.html)
+- [Misiones integradas de decisión](portal.html)
+- [Guía operativa de laboratorios](laboratorios.html)
