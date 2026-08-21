@@ -10,13 +10,12 @@
       "version": "3.12"
     }
   },
-  "forwardPorts": [3000, 4200, 8000, 8080, 8100, 9000],
+  "forwardPorts": [3000, 4200, 8000, 8080, 9000],
   "portsAttributes": {
     "3000": { "label": "Portal SR-01", "onAutoForward": "openBrowser" },
     "4200": { "label": "Fleetbase Console", "onAutoForward": "silent" },
     "8000": { "label": "Fleetbase API", "onAutoForward": "silent" },
     "8080": { "label": "ERPNext", "onAutoForward": "silent" },
-    "8100": { "label": "Integration Hub", "onAutoForward": "silent" },
     "9000": { "label": "frePPLe", "onAutoForward": "silent" }
   },
   "postCreateCommand": "bash .devcontainer/prepare.sh",

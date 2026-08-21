@@ -19,6 +19,8 @@ El repositorio incluye una configuración de GitHub Codespaces para iniciar los 
 
 Luego se abre el puerto 3000 desde la pestaña **PORTS** para acceder al portal y navegar a cada aplicación. La primera ejecución puede tardar porque descarga las imágenes y los repositorios oficiales. La configuración no contiene credenciales personales ni datos de la instalación local.
 
+Nota: GitHub dejó de aceptar nuevas altas de GitHub Classroom en mayo de 2026 durante su transición a soluciones asociadas. La alternativa preparada aquí es usar este repositorio como plantilla, crear un repositorio por equipo y trabajar con Codespaces y Pull Requests.
+
 ## Qué se demuestra
 
 | Laboratorio | Pregunta de negocio | Herramienta / material |
