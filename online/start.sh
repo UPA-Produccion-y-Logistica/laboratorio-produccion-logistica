@@ -14,7 +14,7 @@ clone_once() {
 }
 
 start_portal() {
-  if ! pgrep -f "http.server 3000.*online/runtime" >/dev/null 2>&1; then
+  if ! pgrep -f "[h]ttp.server 3000.*online/runtime" >/dev/null 2>&1; then
     cp "$ROOT/online/launchpad.html" "$ROOT/online/runtime/index.html"
     nohup python -m http.server 3000 --directory "$ROOT/online/runtime" >/tmp/sr01-portal.log 2>&1 &
   fi
