@@ -1,0 +1,42 @@
+name: Ejecutar experimento SR-01 bajo demanda
+
+on:
+  workflow_dispatch:
+    inputs:
+      scenario:
+        description: "Escenario de simulación"
+        required: true
+        default: "base"
+        type: choice
+        options:
+          - base
+          - capacity
+
+permissions:
+  contents: read
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r simulacion/requirements.txt
+      - name: Ejecutar escenario seleccionado
+        run: python simulacion/sr01_salabim.py --scenario "${{ inputs.scenario }}" | tee sr01-${{ inputs.scenario }}.txt
+      - name: Publicar resultado en el resumen
+        run: |
+          {
+            echo "## Resultado SR-01"
+            echo
+            echo '```text'
+            cat "sr01-${{ inputs.scenario }}.txt"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Guardar evidencia de la corrida
+        uses: actions/upload-artifact@v4
+        with:
+          name: sr01-${{ inputs.scenario }}
+          path: sr01-${{ inputs.scenario }}.txt

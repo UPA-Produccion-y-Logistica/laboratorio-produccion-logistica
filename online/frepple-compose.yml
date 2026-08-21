@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: frepple
+      POSTGRES_PASSWORD: frepple
+      POSTGRES_DB: postgres
+    volumes:
+      - frepple_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U frepple -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  frepple:
+    image: ghcr.io/frepple/frepple-community:latest
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: frepple
+      POSTGRES_PASSWORD: frepple
+      POSTGRES_DBNAME: freppledb
+      FREPPLE_TIME_ZONE: America/Asuncion
+    ports:
+      - "9000:80"
+
+volumes:
+  frepple_postgres_data:

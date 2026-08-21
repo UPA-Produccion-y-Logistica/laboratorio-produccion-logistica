@@ -6,6 +6,21 @@ Demostración ejecutable para la cátedra de Producción y Logística de la Univ
 
 Abrir [`index.html`](index.html) en un navegador. No requiere servidor, instalación ni cuenta adicional: permite cambiar entre el escenario base y la mejora de capacidad, observar los KPI y explicar el flujo completo.
 
+## Ejecutar laboratorios reales bajo demanda
+
+El repositorio incluye una configuración de GitHub Codespaces para iniciar los módulos reales solo durante la clase. En un Codespace:
+
+```bash
+./online/start.sh planning    # frePPLe + simulación
+./online/start.sh execution   # OpenMES + Fleetbase
+./online/start.sh all         # los cuatro módulos
+./online/stop.sh              # detener y liberar recursos
+```
+
+Luego se abre el puerto 3000 desde la pestaña **PORTS** para acceder al portal y navegar a cada aplicación. La primera ejecución puede tardar porque descarga las imágenes y los repositorios oficiales. La configuración no contiene credenciales personales ni datos de la instalación local.
+
+Nota: GitHub dejó de aceptar nuevas altas de GitHub Classroom en mayo de 2026 durante su transición a soluciones asociadas. La alternativa preparada aquí es usar este repositorio como plantilla, crear un repositorio por equipo y trabajar con Codespaces y Pull Requests.
+
 ## Qué se demuestra
 
 | Laboratorio | Pregunta de negocio | Herramienta / material |
